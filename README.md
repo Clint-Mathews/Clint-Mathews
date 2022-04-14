@@ -2,4 +2,4 @@
 
 I'm Clint Mathews, a Full stack dev who loves learn new things everyday
 
-![Clint's GitHub stats](https://github-readme-stats.vercel.app/api?username=Clint-Mathews)
+[![Clint's GitHub stats](https://github-readme-stats.vercel.app/api?username=Clint-Mathews)](https://github.com/Clint-Mathews)
