@@ -13,7 +13,7 @@ Skills:
   - Jenkins, AWS Codepipeline, Docker, Kubernetes
   - RDBMS - Postgres, MySQL
   - NoSQL DB - MongoDB, Redis
-- Programming Languages:<br>
+- Programming Languages:
   - JavaScript, TypeScript
   - C#
   - Java
