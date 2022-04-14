@@ -3,9 +3,9 @@
 
 A technology-oriented individual who loves to code and learn new things every day
 
-Skills: <br>
-Tech Stack:
-- React, Angular, Next Js
+Skills:
+- Tech Stack:
+  - React, Angular, Next Js
 - UI frameworks like bootstrap, Material-UI, Tailwind
 - HTML5, CSS3, jQuery
 - Asp .Net, Node js , Express js
