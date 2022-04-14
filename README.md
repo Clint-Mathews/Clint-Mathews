@@ -20,7 +20,7 @@ Skills:
   - Go
 
 - 🔭 I’m currently working on React & .net 
-- 🌱 I’m currently learning Cloud Native  
+- 🌱 I’m currently learning : Cloud Native, BlockChain
 - 👯 I’m looking to collaborate on any sort of development 
 - 📫 How to reach me: mathewsclint28@gmail.com 
 - ⚡ Fun fact: I'd love to collaborate 
