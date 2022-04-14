@@ -3,7 +3,22 @@
 
 A technology-oriented individual who loves to code and learn new things every day
 
-Skills: Full Stack
+Skills: 
+Tech Stack
+• React, Angular, Next Js
+• UI frameworks like bootstrap, Material-UI, Tailwind
+• HTML5, CSS3, jQuery
+• Asp .Net, Node js , Express js
+• Cloud platform - AWS
+• Jenkins, AWS Codepipeline, Docker, Kubernetes
+• RDBMS - Postgres, MySQL
+• NoSQL DB - MongoDB, Redis
+
+Programming Languages
+• JavaScript, TypeScript
+• C#
+• Java
+• Go
 
 - 🔭 I’m currently working on React & .net 
 - 🌱 I’m currently learning Cloud Native  
