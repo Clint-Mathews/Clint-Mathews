@@ -1,6 +1,5 @@
 ### Hi there 👋, Clint Mathews this side
 #### I am a Full Stack Dev
-![I am a Full Stack Dev](https://www.linkedin.com/in/clint-mathews/overlay/background-image/)
 
 A technology-oriented individual who loves to code and learn new things every day
 
