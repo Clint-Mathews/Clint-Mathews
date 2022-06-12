@@ -18,6 +18,7 @@ Skills:
   - C#
   - Java
   - Go
+  - Python
 
 - 🔭 I’m currently working on React & .net 
 - 🌱 I’m currently learning : Cloud Native, BlockChain
