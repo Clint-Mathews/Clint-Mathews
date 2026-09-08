@@ -36,7 +36,7 @@ I am especially interested in **Golang** and the clarity it brings to backend an
 
 **Languages:** Go · TypeScript · Python · C#<br>
 **Backend:** Kafka · gRPC/Protobuf · NestJS · Node.js · Flask · Celery<br>
-**Data and infrastructure:** PostgreSQL · MongoDB · Redis · Docker · AWS · GitHub Actions · Datadog · Prometheus/Grafana<br>
+**Data and infrastructure:** PostgreSQL · MongoDB · Redis · Docker · GCP · AWS · GitHub Actions · Datadog · Prometheus/Grafana<br>
 **Protocols:** OCPP 1.6 / 2.x
 
 ## Elsewhere
