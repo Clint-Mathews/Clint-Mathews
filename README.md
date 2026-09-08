@@ -1,77 +1,44 @@
-# Clint Mathews
-
-**Backend lead for connected device fleets.** I build the systems that keep physical hardware online — Go, Kafka, gRPC, IoT protocols.
-
-At Ford Pro I lead the platform behind **8,200 EV chargers**: **6M+ telemetry messages/day** at 99.9% data integrity, **99.95% uptime**. I architected the OCPP gateway that replaced the legacy monolith — migrated the full fleet, decommissioned ~2,150 servers (~$9,000/mo), and cut observability spend 60%.
-
-Open to remote, worldwide — I anchor to your team's core hours. Contractor/USD invoicing.
-[LinkedIn](https://www.linkedin.com/in/clint-mathews/) · [Site](https://clint-mathews.github.io) · mathewsclint28@gmail.com
+# Clint Mathews 
+[LinkedIn](https://www.linkedin.com/in/clint-mathews/) · [Website](https://clint-mathews.github.io)  · [Email](mailto:mathewsclint28@gmail.com)
 
 ---
 
-## What I'm good at
+**Backend engineer and technical lead building reliable systems at scale.** I work mainly with Go, Kafka, gRPC, and connected hardware.
 
-**High-throughput event pipelines.** Kafka consumers designed for the failure case, not the happy path — circuit breakers, regional bulkhead isolation, Redis-backed per-partition backpressure, transactional offset commits so an offset only advances after replica confirmation. Sized for 2–4x growth without OOM.
 
-**Reliability as an owned responsibility.** L3 production support on critical services. Rearchitected a synchronous reporting pipeline — 30+ minute blocking requests, 91.3% success — into an async Celery/Redis job queue targeting 99.9% with sub-second response.
+## My path
 
-**Cost as a design constraint.** ~$9,000/mo from a server decommission, 60% off observability spend. Both were architecture decisions, not cleanup passes.
+I started by building backend and full-stack products at **Experion Technologies**, working across different project teams and mentoring groups of up to 10 developers. That experience taught me to own the full path from requirements to production, whether the team was small or spread across a larger client delivery.
 
-**The cloud/hardware seam.** OCPP 1.6 and 2.x compliance, cloud-to-charger integration debugging with firmware teams, device simulators covering 2,000+ chargers so fleet-scale problems surface before production.
+At **Ford Pro**, I moved into technical leadership for connected vehicle and charging systems. I now co-own 16 production services supporting **8,200+ EV chargers**, including systems processing **6M+ telemetry messages per day** with 99.9% data integrity and 99.95% uptime. I have worked closely with product, hardware, and firmware teams to make cloud-to-charger communication reliable, and helped replace a legacy monolith with a scalable OCPP gateway that migrated the fleet, removed about 2,150 servers, and reduced observability costs by 60%.
 
----
+I am especially interested in **Golang** and the clarity it brings to backend and distributed systems. My personal work focuses on concurrency, protocols, performance, and failure modes: building systems that still behave predictably when the load arrives or a dependency fails.
 
-## Repositories
+## Write-ups
 
-### [PhotonicOps](https://github.com/Clint-Mathews/PhotonicOps) — Go · gRPC · offline telemetry ingestion
+- [Why Your Distributed Lock Is Probably Broken](https://clint-mathews.medium.com/why-your-distributed-lock-is-probably-broken-592987479e7b) · Fencing tokens, stale writes, and why lease timeouts are not enough.
+- [A Zero-Allocation Worker Pool for 10kHz Sensor Ingestion in Go](https://dev.to/clintmathews/a-zero-allocation-worker-pool-for-10khz-sensor-ingestion-in-go-17ji) · Worker pools, pooled buffers, and predictable ingestion latency.
+- [gRPC over a Unix Socket, Not HTTP](https://dev.to/clintmathews/grpc-over-a-unix-socket-not-http-a-real-ipc-tradeoff-from-a-hipaa-postured-edge-system-4foa) · An IPC trade-off from an offline, HIPAA-oriented edge system.
 
-Offline, air-gapped telemetry ingestion engine for silicon photonic biosensors in HIPAA-sensitive clinical environments. Sustains **10,000 samples/sec** over client-streaming gRPC on a zero-allocation hot path.
+## GitHub statistics
 
-> **Status: Phase 1 of 5 shipped.** Phases 0 and 1 — infra harness and Go ingestion engine — are built and tested. Everything beyond that (agentic LLM triage, mTLS, DSP service, dashboard) is specified in ADRs and **not implemented**. The README says exactly which is which.
+![Clint's GitHub statistics](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Clint-Mathews&theme=github_dark)
 
-Built: `sync.Pool` buffer reuse for a low-GC hot path · lock-free/mutex-protected ring buffer for fixed-memory long-running ingestion · fixed goroutine worker pool with buffered-channel backpressure · Protobuf telemetry contract · synthetic 10kHz sensor client with Gaussian noise and thermal drift modeling · `pprof` instrumentation to verify GC-pause SLAs · GitHub Actions CI with `go test -race`, coverage gating, and static cross-compiled Linux artifacts · fully offline ARM64 Docker Compose stack (Postgres, Prometheus, Grafana, Langfuse, Ollama) behind a health-gate script.
 
-Zero cloud API dependencies anywhere, by design.
+## Contributions to other repositories
 
-### [EchoGate](https://github.com/Clint-Mathews/EchoGate) — Go · Python · LLM traffic
-
-A split-plane AI API gateway and reverse proxy for upstream LLM traffic. Intercepts prompt streams on the data plane to cut latency and cost on calls that don't need to reach a frontier model.
-
-### [Distributed-System-Project-Uno](https://github.com/Clint-Mathews/Distributed-System-Project-Uno) — Go
-
-Pub/sub taken from system-design concept to working implementation — connection management, message serialization, reliable delivery. The counterpart to my [Redis pub/sub write-up](https://dev.to/clintmathews).
-
-### [File-To-BinaryVideo-BackTo-File](https://github.com/Clint-Mathews/File-To-BinaryVideo-BackTo-File) — Go
-
-Encodes an arbitrary file into a binary video format and losslessly decodes it back. An exercise in binary data representation and encoding pipelines.
-
----
-
-## In progress
-
-- **PhotonicOps Phase 1.5** — mTLS transport (ADR decided; current transport is still `insecure.NewCredentials()` and the repo says so).
-- **OCPP protocol notes** — a write-up of what actually breaks between cloud and charger across 1.6 → 2.0.1, from fleet experience.
-
-<!--
-TODO Clint: keep this to two items you'll genuinely push in the next 30 days,
-and delete the rest. An unfulfilled roadmap ages into a list of things you
-didn't do. The OCPP write-up is the highest-leverage one on here — nobody
-else can write it, and it's the single best proof of the niche claim above.
--->
-
----
+- [CitrineOS](https://github.com/citrineos/citrineos) · Reported a broken Getting Started path and WebSocket verification flow, opened a documentation fix, and reviewed OCPP 2.0 documentation work. ([issue](https://github.com/citrineos/citrineos/issues/220) · [docs PR](https://github.com/citrineos/citrineos.github.io/pull/57))
+- [Checkstyle](https://github.com/checkstyle/checkstyle/pull/13738) · Merged a documentation typo fix in the Javadoc checks.
+- [Fork-Commit-Merge](https://github.com/fork-commit-merge/fork-commit-merge/pull/486) · Merged a small Zig contribution.
+- [ocpp-go](https://github.com/lorenzodonini/ocpp-go/issues/151) · Reported an OCPP 2.0.1 validation edge case involving zero-valued measurements.
 
 ## Stack
 
-**Languages** Go · TypeScript · Python · C#
-**Backend** Kafka · gRPC/Protobuf · NestJS · Node.js · Flask · Celery
-**Data** PostgreSQL · MongoDB · Redis
-**Infra** Docker · AWS · GitHub Actions · Datadog · Prometheus/Grafana
-**Protocols** OCPP 1.6 / 2.x
-**Patterns** Event-driven architecture · circuit breakers · bulkhead isolation · backpressure · async job queues · RFC authorship
-
----
+**Languages:** Go · TypeScript · Python · C#<br>
+**Backend:** Kafka · gRPC/Protobuf · NestJS · Node.js · Flask · Celery<br>
+**Data and infrastructure:** PostgreSQL · MongoDB · Redis · Docker · AWS · GitHub Actions · Datadog · Prometheus/Grafana<br>
+**Protocols:** OCPP 1.6 / 2.x
 
 ## Elsewhere
 
-8 RFCs authored at Ford Pro defining core platform services, the OCPP 2.x adoption path, and simulator architecture. Hackathon finalist, Retail & Pro Services Technology Q4 2025 — a React/Flask/GPT-4 platform over 100,000+ Jira issues, 70% faster analysis via intelligent caching and parallel processing.
+- [Website](https://clint-mathews.github.io) for experience, architecture notes, and learning projects.
