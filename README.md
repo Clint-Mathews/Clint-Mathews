@@ -16,9 +16,7 @@ I am especially interested in **Golang** and the clarity it brings to backend an
 
 ## Write-ups
 
-- Building ChaosBox**(In progress)** documents how a deliberately simple Go, PostgreSQL, and Kubernetes system evolves by measuring and solving one constraint at a time.
- 
-  - [Validate the Load Test Before Scaling](https://clint-mathews.medium.com/validate-the-load-test-before-scaling-d52b9cb4dcf7): Why a benchmark is only useful when its workload, traffic path, and evidence can be trusted. 
+- Building ChaosBox **(In progress)** documents how a deliberately simple Go, PostgreSQL, and Kubernetes system evolves by measuring and solving one constraint at a time.
   - [View the complete Building ChaosBox series on Medium](https://clint-mathews.medium.com/list/building-chaosbox-3cac6198eb35)
 
 - [Why Your Distributed Lock Is Probably Broken](https://clint-mathews.medium.com/why-your-distributed-lock-is-probably-broken-592987479e7b) · Fencing tokens, stale writes, and why lease timeouts are not enough.
